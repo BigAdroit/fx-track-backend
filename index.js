@@ -40,7 +40,11 @@ app.use("/fx-journal/strategy/", strategyRoute)
 app.use("/fx-journal/watchlist", watchListRoute)
 app.use("/fx-journal/edit-profile", profileRoute)
 
-
+app.get('/', (req, res)=>{
+    res.json({
+        "connection": "Successful"
+    })
+})
 
 app.get("/test", async(req, res)=> {
     res.sendFile(__dirname + "/index.html")
