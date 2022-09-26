@@ -46,9 +46,9 @@ app.get('/', (req, res)=>{
     })
 })
 
-app.get("/test", async(req, res)=> {
-    res.sendFile(__dirname + "/index.html")
-})
+// app.get("/test", async(req, res)=> {
+//     res.sendFile(__dirname + "/index.html")
+// })
 
 //  MONGOOSE CONNECTION TO DATABASE 
 
