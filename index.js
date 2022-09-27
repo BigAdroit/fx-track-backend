@@ -53,8 +53,7 @@ app.get('/', (req, res)=>{
 //  MONGOOSE CONNECTION TO DATABASE 
 
 // connecting to mongooose database
-const uri = process.env.MONGODB_CONNECTION_STRING;
-const url = "mongodb://localhost:27017/fxJournal"
+const uri = "mongodb+srv://bendingAdroit:adroitHotelDatabase@cluster0.1anal.mongodb.net/fxTrack?retryWrites=true&w=majority";
 
 
 mongoose.Promise = global.Promise
