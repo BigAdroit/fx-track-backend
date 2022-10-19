@@ -108,7 +108,8 @@ router.get("/getjournal/:id", ensureToken, async (req, res) => {
             if (response) {
               const userJournal = await Journal.find({
                 user_id: req.params.id,
-              });
+               
+              }).sort({$natural : -1});
               res.json({
                 payload: userJournal,
                 totalCount: userJournal.length,
