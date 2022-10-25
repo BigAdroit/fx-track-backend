@@ -205,6 +205,7 @@ router.get("/dashboard-data/:id", ensureToken, async(req, res)=> {
             // End of Timeframe Monthly Analysis
 
             const watchlist = await Watchlist.find({user_id : req.params.id, isActive : true})
+            let profit = []
 
             journal.forEach((item)=> {
               if(item.profit_loss === "profit") {
@@ -240,7 +241,6 @@ router.get("/dashboard-data/:id", ensureToken, async(req, res)=> {
                 }
               })
 
-            let profit = []
 
             // journal.forEach((item)=> {
             //   if(item.profit_loss === "profit") {
