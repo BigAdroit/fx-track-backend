@@ -89,7 +89,7 @@ router.get("/get-watchlist/:id", ensureToken, async (req, res) => {
             if (response) {
               const userWatchlist = await Watchlist.find({
                 user_id: req.params.id,
-              });
+              }).sort({$natural : -1});;
               res.json({
                 payload: userWatchlist,
                 totalCount: userWatchlist.length,

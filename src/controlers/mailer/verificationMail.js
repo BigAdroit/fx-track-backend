@@ -7,13 +7,18 @@ async function sendVerificationMail(user, callback) {
         host: 'smtp.mailtrap.io',
         port : 2525,
         auth: {
-        user: "04d67c0ae66f1f",
-        pass: "a052f0c5299171"
-  }
+          user: "04d67c0ae66f1f",
+          pass: "a052f0c5299171"
+          }
+        // host :"gmail",
+        // auth : {
+        //   user : "adroit819@gmail.com",
+        //   pass : 'horppy64'
+        // }
     })
 
     let mailOption = {
-        from : "'FX-JOURNAL'", // semder address
+        from : "'adroit819@gmail.com'", // semder address
         to: user.email,
         subject : 'Verify Account',
         html : ` <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -177,7 +182,7 @@ async function sendVerificationMail(user, callback) {
                                                       <tbody>
                                                         <tr>
                                                           <td style="line-height: 24px; font-size: 16px; border-radius: 6px; margin: 0;" align="center" bgcolor="#198754">
-                                                            <a href="http://localhost:3000/auth/emailVerification/${user.email}" target="_blank" style="color: #ffffff; font-size: 16px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 6px; line-height: 20px; display: block; font-weight: normal; white-space: nowrap; background-color: #198754; padding: 8px 12px; border: 1px solid #198754;"> Verify Account </a>
+                                                            <a href="https://fx-track-backend.vercel.app/auth/emailVerification/${user.email}" target="_blank" style="color: #ffffff; font-size: 16px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 6px; line-height: 20px; display: block; font-weight: normal; white-space: nowrap; background-color: #198754; padding: 8px 12px; border: 1px solid #198754;"> Verify Account </a>
                                                           </td>
                                                         </tr>
                                                       </tbody>

@@ -108,7 +108,7 @@ router.get('/getstrategy/:id', ensureToken, async(req, res)=> {
      } else {
        await User.findById({_id : req.params.id}).then( async (response)=> {
            if(response) {
-               const userStrategy = await Strategy.find({user_id : req.params.id})
+               const userStrategy = await Strategy.find({user_id : req.params.id}).sort({$natural : -1});
                res.json({
                  "payload": userStrategy,
                    "totalCount" : userStrategy.length,
